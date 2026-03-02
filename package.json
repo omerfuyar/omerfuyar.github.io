@@ -1,14 +1,13 @@
 {
   "name": "omerfuyar.github.io",
   "scripts": {
-    "build": "esbuild src/main.ts --bundle --minify --outfile=./deploy/index.js",
-    "watch": "esbuild src/main.ts --bundle --outfile=./deploy/index.js --watch"
+    "build": "esbuild ./src/main.ts --bundle --minify --outfile=./deploy/index.js",
+    "serve": "esbuild ./src/main.ts --outfile=./deploy/index.js --servedir=deploy --serve"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/omerfuyar/omerfuyar.github.io.git"
   },
-  "keywords": [],
   "type": "commonjs",
   "devDependencies": {
     "@types/node": "^25.3.3",
