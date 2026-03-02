@@ -28,7 +28,7 @@ jobs:
           node-version: '20'
 
       - name: Install TypeScript
-        run: npm install -g typescript
+        run: npm install
 
       - name: Compile TypeScript
         run: npm run build
