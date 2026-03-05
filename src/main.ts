@@ -7,7 +7,7 @@ const todoInput = document.getElementById('todo-input') as HTMLInputElement;
 const addButton = document.getElementById('add-todo') as HTMLButtonElement;
 const todoList = document.getElementById('todo-list') as HTMLUListElement;
 
-const todos: Todo[] = [];
+const todos: Array<Todo> = new Array<Todo>;
 
 function addTodo(): void {
     const text = todoInput.value.trim();
@@ -22,10 +22,15 @@ function addTodo(): void {
 function renderTodos(): void {
     todoList.innerHTML = '';
     todos.forEach((todo, index) => {
-        const li = document.createElement('li');
+        const li: HTMLLIElement = document.createElement('li');
         li.textContent = todo.text;
         li.addEventListener('click', () => toggleTodo(index));
-        if (todo.done) li.style.textDecoration = 'line-through';
+
+        if (todo.done) {
+
+            li.style.textDecoration = 'line-through';
+        }
+
         todoList.appendChild(li);
     });
 }
