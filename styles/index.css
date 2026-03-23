@@ -1,0 +1,20 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #dbdbdb;
+}
+
+#main {
+    text-align: center;
+}
+
+button {
+    padding: 8px;
+    background-color: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+}

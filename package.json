@@ -1,18 +1,20 @@
 {
   "name": "omerfuyar.github.io",
   "scripts": {
-    "build": "esbuild ./src/main.ts --bundle --minify --outfile=./deploy/index.js",
-    "serve": "esbuild ./src/main.ts --outfile=./deploy/index.js --servedir=deploy --serve"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "npm run build && vite preview"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/omerfuyar/omerfuyar.github.io.git"
   },
-  "type": "commonjs",
+  "type": "module",
   "devDependencies": {
+    "@types/marked": "^5.0.2",
     "@types/node": "^25.3.3",
-    "esbuild": "^0.27.3",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "vite": "^8.0.2"
   },
   "dependencies": {
     "marked": "^17.0.3"

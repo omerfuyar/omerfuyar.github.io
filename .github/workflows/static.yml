@@ -30,10 +30,10 @@ jobs:
         with:
           node-version: 'latest'
 
-      - name: Install TypeScript
+      - name: Install
         run: npm install
 
-      - name: Compile TypeScript
+      - name: Compile
         run: npm run build
 
       - name: Setup Pages
@@ -42,7 +42,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './deploy'
+          path: './dist'
 
       - name: Deploy to GitHub Pages
         id: deployment
