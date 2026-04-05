@@ -14,46 +14,28 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-/* Make headers completely transparent so they blend into the background image */
-header {
-    background: transparent;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    position: relative;
-    z-index: 10;
-}
-
-nav {
-    max-width: 680px;
-    margin: 0 auto;
-    padding: 20px 24px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-nav .brand {
+/* Absolute positioned brand center-top or top-left */
+.floating-brand {
+    position: absolute;
+    top: 20px;
+    left: 24px;
+    font-family: 'Inter', sans-serif;
     font-size: 1.25rem;
     font-weight: 700;
-    color: #ffffff;
+    color: #fff;
     text-decoration: none;
     letter-spacing: -0.03em;
+    z-index: 100;
+    transition: opacity 0.3s;
 }
 
-nav .links a {
-    margin-left: 20px;
-    color: #a3a3a3;
-    text-decoration: none;
-    font-size: 0.95rem;
-}
-
-nav .links a:hover,
-nav .links a.active {
-    color: #ffffff;
+.floating-brand:hover {
+    opacity: 0.7;
 }
 
 #main {
     max-width: 680px;
-    margin: 50px auto;
+    margin: 80px auto 50px auto; /* 80px top so it stays fully clear of the floating brand */
     padding: 0 24px;
     position: relative;
     z-index: 10;
