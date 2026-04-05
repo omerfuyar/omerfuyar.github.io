@@ -1,8 +1,98 @@
 @import './index.css';
 
-#blog-content {
-    text-align: left;
-    max-width: 600px;
-    margin: 0 auto;
-    display: none;
+#blog-content h1,
+#blog-content h2,
+#blog-content h3 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    color: #242424;
+    margin-top: 2em;
+    margin-bottom: 0.5em;
+}
+
+#blog-content h1 {
+    font-size: 2.75rem;
+    line-height: 1.2;
+    letter-spacing: -0.03em;
+    margin-top: 0;
+}
+
+#blog-content h2 {
+    font-size: 1.75rem;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 10px;
+}
+
+#blog-content p {
+    margin-bottom: 1.5em;
+}
+
+#blog-content blockquote {
+    border-left: 3px solid #242424;
+    margin-left: -20px;
+    padding-left: 17px;
+    font-style: italic;
+    color: #6b6b6b;
+}
+
+#blog-content pre {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9rem;
+    overflow-x: auto;
+    margin-bottom: 1.5em;
+}
+
+#blog-content code {
+    background-color: #f9f9f9;
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.9em;
+}
+
+/* Go Back Button */
+.back-link {
+    display: inline-block;
+    font-family: 'Inter', sans-serif;
+    color: #6b6b6b;
+    text-decoration: none;
+    margin-bottom: 40px;
+    font-size: 0.9rem;
+}
+
+.back-link:hover {
+    color: #242424;
+}
+
+/* Blog List Formats */
+.blog-list-item {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    margin-bottom: 40px;
+}
+
+.blog-list-item h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: #242424;
+    margin-bottom: 5px;
+    line-height: 1.3;
+}
+
+.blog-list-item:hover h2 {
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 2px;
+}
+
+.blog-list-item p.date {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+    color: #6b6b6b;
 }

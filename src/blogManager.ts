@@ -65,15 +65,14 @@ async function renderPostList() {
 
     for (const post of allPosts) {
         const link = document.createElement('a');
-
         link.href = `?post=${post.id}`;
-
-        link.innerHTML = `<strong>${post.title}</strong> - ${post.date}`;
-
         link.className = 'blog-list-item';
 
+        link.innerHTML = `
+            <h2>${post.title}</h2>
+            <p class="date">${post.date}</p>
+        `;
+
         blogListDiv.appendChild(link);
-        blogListDiv.appendChild(document.createElement('br'));
-        blogListDiv.appendChild(document.createElement('br'));
     }
 }
