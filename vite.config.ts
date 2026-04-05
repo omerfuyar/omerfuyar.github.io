@@ -5,7 +5,7 @@ export default defineConfig({
     build: {
         rollupOptions: {
             input: {
-                main: resolve(__dirname, 'routes/index.html'),
+                main: resolve(__dirname, 'index.html'),
                 blog: resolve(__dirname, 'routes/blog.html'),
                 profile: resolve(__dirname, 'routes/profile.html')
             }
