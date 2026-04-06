@@ -81,17 +81,6 @@ header,
 .social-links {
     margin-top: 30px;
     display: flex;
+    justify-content: center;
     gap: 15px;
-}
-
-.social-links a {
-    color: #ffffff;
-    text-decoration: underline;
-    text-underline-offset: 3px;
-    text-decoration-thickness: 1px;
-    font-weight: 500;
-}
-
-.social-links a:hover {
-    color: #a3a3a3;
 }

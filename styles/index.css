@@ -14,8 +14,21 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+a,
+a:visited {
+    color: #c3793b;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #9e6231;
+}
+
 /* Absolute positioned brand center-top or top-left */
-.floating-brand {
+.floating-brand,
+.floating-brand:visited {
     position: absolute;
     top: 20px;
     left: 24px;
@@ -30,12 +43,14 @@ body {
 }
 
 .floating-brand:hover {
+    color: #fff;
     opacity: 0.7;
 }
 
 #main {
     max-width: 680px;
-    margin: 80px auto 50px auto; /* 80px top so it stays fully clear of the floating brand */
+    margin: 80px auto 50px auto;
+    /* 80px top so it stays fully clear of the floating brand */
     padding: 0 24px;
     position: relative;
     z-index: 10;
