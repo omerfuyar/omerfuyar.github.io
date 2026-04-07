@@ -14,18 +14,6 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-a,
-a:visited {
-    color: #c3793b;
-    text-decoration: underline;
-    text-underline-offset: 3px;
-    transition: color 0.2s ease;
-}
-
-a:hover {
-    color: #9e6231;
-}
-
 /* Absolute positioned brand center-top or top-left */
 .floating-brand,
 .floating-brand:visited {
@@ -56,20 +44,52 @@ a:hover {
     z-index: 10;
 }
 
-/* Glassmorphism content container so text is readable over blurry images */
-.content-glass {
-    background: rgba(15, 15, 15, 0.7);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: 12px;
-    padding: 40px;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+/* Typography Utilities */
+.title {
+    font-family: 'Charter', 'Georgia', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: #ffffff;
+    margin-bottom: 5px;
+    line-height: 1.3;
 }
 
-/* Mobile responsive padding for glass container */
-@media screen and (max-width: 768px) {
-    .content-glass {
-        padding: 20px;
-    }
+.text {
+    font-family: 'Charter', 'Georgia', serif;
+    font-size: 1.2rem;
+    color: #e5e5e5;
+    line-height: 1.8;
+}
+
+.subtitle {
+    font-family: 'Charter', 'Georgia', serif;
+    font-size: 0.9rem;
+    color: #a3a3a3;
+    margin-top: 5px;
+}
+
+.link {
+    color: #c3793b;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.link:visited {
+    color: #c3793b;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.link a:hover {
+    color: #9e6231;
+}
+
+/* System Messages Utilities */
+.system-msg {
+    color: #c3793b;
 }

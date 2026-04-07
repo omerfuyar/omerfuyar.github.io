@@ -21,22 +21,36 @@ body::before {
     z-index: 1;
 }
 
-header,
-#main {
-    position: relative;
-    z-index: 2;
+/* Content Card Utilities */
+.card {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    margin-bottom: 40px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    transition: transform 0.2s ease, background 0.2s ease;
 }
 
-#blog-content {
+.card:hover {
+    background: rgba(255, 255, 255, 0.05);
+    transform: translateY(-2px);
+    color: inherit;
+}
+
+/* Article/Markdown Utilities */
+.article-content {
     font-family: 'Charter', 'Georgia', serif;
     font-size: 1.2rem;
     color: #e5e5e5;
     line-height: 1.8;
 }
 
-#blog-content h1,
-#blog-content h2,
-#blog-content h3 {
+.article-content h1,
+.article-content h2,
+.article-content h3 {
     font-family: 'Inter', sans-serif;
     font-weight: 700;
     color: #ffffff;
@@ -44,24 +58,24 @@ header,
     margin-bottom: 0.5em;
 }
 
-#blog-content h1 {
+.article-content h1 {
     font-size: 2.75rem;
     line-height: 1.2;
     letter-spacing: -0.03em;
     margin-top: 0;
 }
 
-#blog-content h2 {
+.article-content h2 {
     font-size: 1.75rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     padding-bottom: 10px;
 }
 
-#blog-content p {
+.article-content p {
     margin-bottom: 1.5em;
 }
 
-#blog-content blockquote {
+.article-content blockquote {
     border-left: 3px solid rgba(255, 255, 255, 0.4);
     margin-left: -20px;
     padding-left: 17px;
@@ -69,7 +83,7 @@ header,
     color: #a3a3a3;
 }
 
-#blog-content pre {
+.article-content pre {
     background-color: rgba(0, 0, 0, 0.6);
     padding: 20px;
     border-radius: 5px;
@@ -80,52 +94,11 @@ header,
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-#blog-content code {
+.article-content code {
     background-color: rgba(0, 0, 0, 0.6);
     padding: 2px 4px;
     border-radius: 3px;
     font-family: 'Courier New', Courier, monospace;
     font-size: 0.9em;
     color: #ffd700;
-}
-
-/* Blog List Formats */
-.blog-list-item {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-    margin-bottom: 40px;
-    padding: 20px;
-    /* Mini-glass effect for individual blog list cards */
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    border-radius: 8px;
-    transition: transform 0.2s ease, background 0.2s ease;
-}
-
-.blog-list-item:hover {
-    background: rgba(255, 255, 255, 0.05);
-    transform: translateY(-2px);
-}
-
-.blog-list-item h2 {
-    font-family: 'Inter', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 700;
-    letter-spacing: -0.02em;
-    color: #ffffff;
-    margin-bottom: 5px;
-    line-height: 1.3;
-}
-
-.blog-list-item p.date {
-    font-family: 'Inter', sans-serif;
-    font-size: 0.9rem;
-    color: #a3a3a3;
-}
-
-/* System wait/error messages */
-.message-wait,
-.message-error {
-    color: #a3a3a3;
 }

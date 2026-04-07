@@ -86,7 +86,6 @@ body {
     background-image: url('/images/splitProfile.jpg');
 }
 
-
 /* Content formatting */
 .split-side .content {
     position: relative;
@@ -95,31 +94,28 @@ body {
     text-align: center;
 }
 
-.split-side h2 {
-    font-family: 'Inter', sans-serif;
+/* Reset .title inside home.css specific to home's parallax layout */
+.split-side .title {
     font-size: 3.5rem;
-    font-weight: 700;
-    letter-spacing: -0.04em;
     margin-bottom: 5px;
     transform: translateY(0);
     transition: transform 0.4s ease;
 }
 
-.split-side p {
-    font-family: 'Charter', 'Georgia', serif;
-    font-size: 1.25rem;
+.split-side .subtitle {
     font-style: italic;
     opacity: 0.7;
+    margin-top: 0;
     transform: translateY(0);
     transition: transform 0.4s ease, opacity 0.4s ease;
 }
 
 /* Parallax vertical lift on text when hovered */
-.split-side:hover h2 {
+.split-side:hover .title {
     transform: translateY(-8px);
 }
 
-.split-side:hover p {
+.split-side:hover .subtitle {
     transform: translateY(-8px);
     opacity: 1;
 }

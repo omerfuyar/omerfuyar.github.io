@@ -3,6 +3,7 @@ import * as md from 'marked';
 interface BlogPost {
     id: string;      // The name of the file
     title: string;   // The human-readable title to show in List
+    summary: string; // A short summary to show in List
     date: string;    // The date to show in List
 }
 
@@ -12,10 +13,10 @@ const blogContentDiv = document.getElementById('blog-content')!;
 const urlParams = new URLSearchParams(window.location.search);
 const requestedPostId = urlParams.get('post');
 
-const HTML_WAIT_POSTS = `<p class="message-wait">Loading posts...</p>`;
-const HTML_WAIT_POST = `<p class="message-wait">Loading post...</p>`;
-const HTML_ERROR_POSTS = `<p class="message-error">Failed to load the index list.</p>`;
-const HTML_ERROR_POST = `<p class="message-error">Failed to load the post.</p>`;
+const HTML_WAIT_POSTS = `<p class="system-msg">Loading posts...</p>`;
+const HTML_WAIT_POST = `<p class="system-msg">Loading post...</p>`;
+const HTML_ERROR_POSTS = `<p class="system-msg">Failed to load the index list.</p>`;
+const HTML_ERROR_POST = `<p class="system-msg">Failed to load the post.</p>`;
 
 if (requestedPostId) {
     await renderPost(requestedPostId);
@@ -63,14 +64,20 @@ async function renderPostList() {
 
     blogListDiv.innerHTML = '';
 
+    if (allPosts.length === 0) {
+        blogListDiv.innerHTML = `<p class="system-msg">There are no posts yet.</p>`;
+        return;
+    }
+
     for (const post of allPosts) {
         const link = document.createElement('a');
         link.href = `?post=${post.id}`;
-        link.className = 'blog-list-item';
+        link.className = 'card';
 
         link.innerHTML = `
-            <h2>${post.title}</h2>
-            <p class="date">${post.date}</p>
+            <h2 class="title">${post.title}</h2>
+            <p class="text">${post.summary}</p>
+            <p class="subtitle">${post.date}</p>
         `;
 
         blogListDiv.appendChild(link);
