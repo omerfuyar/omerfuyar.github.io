@@ -1,24 +1,22 @@
 {
+  // Only used for type checking in the editor. Node runs the scripts directly by stripping types.
   "compilerOptions": {
-    "rootDir": "./src",
-    "outDir": "./dist",
     // Environment Settings
-    // See also https://aka.ms/tsconfig/module
-    "target": "es2022",
-    "module": "esnext",
+    "target": "esnext",
+    "module": "nodenext",
+    "moduleResolution": "nodenext",
     "lib": [
-      "DOM",
-      "DOM.Iterable",
-      "ES2022"
+      "esnext"
     ],
-    "moduleResolution": "bundler",
-    // For nodejs:
-    // "lib": ["esnext"],
-    // "types": ["node"],
-    // Other Outputs
-    "sourceMap": true,
-    "declaration": true,
-    "declarationMap": true,
+    "types": [
+      "node"
+    ],
+    "noEmit": true,
+    // Node Type Stripping Compatibility
+    "allowImportingTsExtensions": true,
+    "erasableSyntaxOnly": true,
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
     // Stricter Typechecking Options
     "noUncheckedIndexedAccess": true,
     "exactOptionalPropertyTypes": true,
@@ -31,17 +29,11 @@
     "noPropertyAccessFromIndexSignature": true,
     // Recommended Options
     "strict": true,
-    "verbatimModuleSyntax": true,
-    "isolatedModules": true,
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
-    "skipLibCheck": true,
+    "skipLibCheck": true
   },
   "include": [
-    "src/**/*.ts"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist"
+    "scripts/**/*.ts"
   ]
 }

@@ -1,10 +1,6 @@
 @import './index.css';
 
 body {
-    background-image: url('/images/profileBG.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
     background-color: #0d0d0d;
     /* Fallback */
 }
@@ -16,7 +12,9 @@ body::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.7);
+    /* Image lives on a fixed layer instead of background-attachment: fixed,
+       which Chrome sometimes fails to repaint, leaving black bands */
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/images/profileBG.avif') center / cover no-repeat;
     /* Slightly darker for profile so avatar pops */
     z-index: 1;
 }

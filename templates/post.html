@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="{{lang}}">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{title}} - omerfuyar</title>
+    <meta name="description" content="{{description}}" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="{{title}}" />
+    <meta property="og:description" content="{{description}}" />
+    <meta property="og:url" content="{{url}}" />
+    <link rel="canonical" href="{{url}}" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Charter:ital,wght@0,400;0,700;1,400&display=swap" />
+    <link rel="stylesheet" href="/styles/blog.css" />
+</head>
+
+<body>
+    <a href="/" class="floating-brand">omerfuyar</a>
+
+    <main id="main" class="post-main">
+        <div class="post-meta">
+            <a href="/blog/" class="link">&larr; All posts</a>
+            <p class="subtitle">{{date}}</p>
+        </div>
+
+        <article class="article-content">
+            {{content}}
+        </article>
+    </main>
+</body>
+
+</html>

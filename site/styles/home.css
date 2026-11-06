@@ -79,11 +79,11 @@ body {
 }
 
 .left-side::after {
-    background-image: url('/images/splitBlog.jpg');
+    background-image: url('/images/splitBlog.avif');
 }
 
 .right-side::after {
-    background-image: url('/images/splitProfile.jpg');
+    background-image: url('/images/splitProfile.avif');
 }
 
 /* Content formatting */
